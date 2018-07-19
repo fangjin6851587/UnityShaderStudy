@@ -19,7 +19,7 @@ Shader "Unity Shaders Book/Chapter5/Simple Shader"
 			struct a2v {
 				float4 vertex : POSITION;
 				float3 normal : NORMAL;
-				float texcoord : TEXCOORD0;
+				float4 texcoord : TEXCOORD0;
 			};
 
 			struct v2f {
