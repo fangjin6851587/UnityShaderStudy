@@ -56,7 +56,7 @@
 				float3 worldPos = i.worldPos;
 
 					//get the light direction in world space
-				fixed3 worldLightDir = UnityWorldSpaceLightDir(worldPos);
+				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(worldPos));
 
 				//compute diffuse term
 				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));

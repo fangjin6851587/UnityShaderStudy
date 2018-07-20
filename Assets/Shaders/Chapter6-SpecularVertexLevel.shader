@@ -45,7 +45,7 @@
 
 				//get the light direction in world space
 				//fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
-				fixed3 worldLightDir = WorldSpaceLightDir(v.vertex);
+				fixed3 worldLightDir = normalize(WorldSpaceLightDir(v.vertex));
 
 				//compute diffuse term
 				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
